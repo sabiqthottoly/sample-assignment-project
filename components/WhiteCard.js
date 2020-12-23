@@ -5,10 +5,6 @@ export default function WhiteCard() {
 
     const [isfocus, setIsFocus] = useState(false)
 
-    const onFocusHandler=()=>{
-
-    }
-
     return (
         <View style={{ backgroundColor: 'white', borderRadius: 10, elevation: 7, flex: 1, width: '90%', marginVertical: 20, marginHorizontal: 20 }}>
 

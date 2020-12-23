@@ -7,16 +7,6 @@ import WhiteCard from './components/WhiteCard';
 
 const windowHeight = Dimensions.get('window').height;
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-}
-
 class InboxScreen extends React.Component {
   render() {
     return (
@@ -46,6 +36,7 @@ class profileScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'whiteSmoke' }}>
+       
         <Modal
           animationType="slide"
           transparent={true}
@@ -61,7 +52,7 @@ class profileScreen extends React.Component {
           </View>
         </Modal>
 
-        <ImageBackground source={require('./images/woman.jpg')} style={{ backgroundColor: 'red', width: '100%', height: 300, }}>
+        <ImageBackground source={require('./images/woman.jpg')} style={{width: '100%', height: 300, }}>
           <View style={{ position: 'absolute', left: 20, top: 20, justifyContent: 'center', flexDirection: 'row' }}>
             <TouchableOpacity onPress={() => this.setState({ isModalVisible: true })}>
               <Image source={require('./images/menu.png')} style={{ height: 25, width: 25, tintColor: 'white', marginRight: 15 }} />
@@ -96,13 +87,6 @@ class SettingsScreen extends React.Component {
     );
   }
 }
-
-
-
-
-
-
-
 
 const TabNavigator = createBottomTabNavigator({
   INBOX: {
@@ -160,8 +144,6 @@ const TabNavigator = createBottomTabNavigator({
       )
     }
   },
-  // PROFILE: profileScreen,
-  // MORE: SettingsScreen,
 }, {
   initialRouteName: 'PROFILE',
   tabBarOptions: {
@@ -177,10 +159,6 @@ const TabNavigator = createBottomTabNavigator({
 });
 
 const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    height: '100%'
-  },
   modalView: {
     backgroundColor: "white",
     height: windowHeight,
@@ -195,21 +173,6 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5
   },
-  openButton: {
-    backgroundColor: "#F194FF",
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center"
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: "center"
-  }
 });
 
 

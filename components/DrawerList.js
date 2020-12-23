@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 
 export default function DrawerList() {
-
 
     const listData = [{ title: 'Inbox', image: require('../images/inbox.png') },
     { title: 'Edit Profile', image: require('../images/user.png') },
@@ -35,7 +34,6 @@ export default function DrawerList() {
                                 <Image source={item.image} style={{ height: 25, width: 25, marginRight: 10, marginTop: 20, tintColor: 'grey' }} />
                                 <Text style={{ marginTop: 20, color: 'grey' }}>{item.title}</Text>
                             </TouchableOpacity>
-
                         )
                     }}
                 />
